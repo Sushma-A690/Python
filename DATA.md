@@ -15,7 +15,7 @@ Data Engineers mainly focus on moving and preparing data
 Analysts, Data Scientists, and ML models consume this prepared data
 
 3. Roles Explained Simply
-Data Engineer (DE)
+**Data Engineer (DE)**
 
 Moves data from one place to another
 
@@ -23,7 +23,7 @@ Builds pipelines (ETL/ELT)
 
 Ensures data is reliable, scalable, and available
 
-Data Analyst / ML Analyst
+**Data Analyst / ML Analyst**
 
 Analyzes data patterns
 
@@ -31,7 +31,7 @@ Understands customer behavior
 
 Performs forecasting and trend analysis
 
-AI / ML Engineer
+**AI / ML Engineer**
 
 Models learn patterns from data
 
@@ -39,13 +39,13 @@ Builds predictive systems
 
 Examples: recommendation systems, fraud detection
 
-Data Scientist
+**Data Scientist**
 
 Combines statistics + ML + domain knowledge
 
 Experiments with data to solve business problems
 
-DevOps Engineer
+**DevOps Engineer**
 
 Builds CI/CD pipelines
 
@@ -55,7 +55,7 @@ Development → Testing → QA → Production
 
 Flow: Code → Git → CI/CD → Unit Tests → Deployment
 
-Data Governance
+**Data Governance**
 
 Secures and manages data
 
@@ -121,7 +121,7 @@ Cloud-based approach
 Transform only required data → saves cost & compute
 
 6. Data Lake Layers (Medallion Architecture)
-Bronze Layer
+**Bronze Layer**
 
 Raw data
 
@@ -129,7 +129,7 @@ Structured, semi‑structured, unstructured
 
 Minimal changes
 
-Silver Layer
+**Silver Layer**
 
 Cleaned and transformed data
 
@@ -137,7 +137,7 @@ Business logic applied
 
 Often processed using Databricks / Spark
 
-Gold Layer
+**Gold Layer**
 
 Aggregated, business-ready data
 
