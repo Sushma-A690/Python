@@ -5,72 +5,58 @@ Processing requires high computation.
 Data is processed using parallel computation across multiple machines.
 
 **Hadoop Architecture**
-Core Components
-HDFS (Hadoop Distributed File System) – Storage
-MapReduce – Processing
-YARN – Resource management
+Core Components:
+HDFS (Hadoop Distributed File System) – Storage,
+MapReduce – Processing,
+YARN – Resource management.
 
-HDFS (Storage Layer)
-Large files are broken into blocks:Default block size: 128 MB / 256 MB
+HDFS (Storage Layer):
+Large files are broken into blocks:Default block size: 128 MB / 256 MB,
 Blocks are distributed across multiple DataNodes.
 Enables parallel read and write.
-HDFS Nodes
-NameNode (Master Node):Stores metadata (file name, block locations),Knows where each block is stored
-DataNode (Worker Node):Stores actual data blocks
-Performs read/write operations
+HDFS Nodes:
+NameNode (Master Node):Stores metadata (file name, block locations),Knows where each block is stored.
+DataNode (Worker Node):Stores actual data blocks,
+Performs read/write operations.
 Data Backup in HDFS:HDFS maintains replicas of blocks (default replication factor = 3).
 Ensures fault tolerance.
 Replication and recovery can take significant time for large data.
 
 **MapReduce (Processing Layer)**
-Map Phase:Processes data in parallel
+Map Phase:Processes data in parallel.
 Example: counts each word/record
-Reduce Phase:Aggregates and summarizes results
-Produces a single final output
+Reduce Phase:Aggregates and summarizes results,
+Produces a single final output.
 Limitation:Every step reads from disk and writes back to disk, Results in slower performance
 
 **Spark Architecture**
 Why Spark?
-Designed for high-performance processing Avoids repeated disk I/O
+Designed for high-performance processing Avoids repeated disk I/O,
 Ideal for iterative and real-time workloads
 
 Key Concepts in Spark
-In-Memory Processing: Data is read once from disk Stored in RAM
+In-Memory Processing: Data is read once from disk Stored in RAM,
 Intermediate results stay in memory Only final output is written to disk
 
 **Spark Components**
-Driver Program
-Controls the execution of the Spark application
-Creates SparkContext
-Coordinates tasks
+Driver Program:Controls the execution of the Spark application,Creates SparkContext,Coordinates tasks.
 
-RDD (Resilient Distributed Dataset)
-Distributed collection of data
-Stored in memory
-Fault-tolerant
-Immutable
+RDD (Resilient Distributed Dataset):Distributed collection of data,Stored in memory,Fault-tolerant,Immutable.
 
-Cluster Management
-Manages resources such as:
-Number of executors,CPU cores, Memory
+Cluster Management:Manages resources such as:Number of executors,CPU cores, Memory.
 Examples:YARN,Kubernetes,Standalone cluster
 
-Executors
-Run tasks assigned by the driver
-Execute transformations and actions
-Store data in memory or disk
-Send results back to the driver
+Executors:Run tasks assigned by the driver,Execute transformations and actions,Store data in memory or disk,Send results back to the driver
 
-Nodes in Spark
-Master Node-Manages cluster resources,Tracks metadata
-Worker/Data Nodes-Store data,Read data,Execute tasks,Write final output
+Nodes in Spark:
+Master Node-Manages cluster resources,Tracks metadata. 
+Worker/Data Nodes-Store data,Read data,Execute tasks,Write final output.
 
 **Hadoop vs Spark (Key Difference)**
-Hadoop MapReduce	Spark
-Disk-based processing vs	In-memory processing
-Every step hits disk	Disk vs used only for final output
-Slower	vs Much faster
-Batch-oriented	vs Batch + Streaming
+Disk-based processing vs	In-memory processing,
+Every step hits disk	Disk vs used only for final output,
+Slower	vs Much faster,
+Batch-oriented	vs Batch + Streaming.
 
 Summary
 Hadoop is reliable for large-scale batch processing
