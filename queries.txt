@@ -1,0 +1,123 @@
+1. Data Analysis – Understanding the Data
+
+Data analysis starts with exploring the data:
+
+What features (columns) does it have?
+
+What kind of values exist?
+
+Are there missing values?
+
+How are columns related?
+
+2. Logical Conditions in SQL
+AND
+
+Returns rows that satisfy all conditions
+
+WHERE rental_duration = 6 AND rating = 'G'
+
+OR
+
+Returns rows that satisfy any one condition
+
+WHERE rating = 'G' OR rating = 'PG'
+
+NOT
+
+Excludes specific conditions
+
+WHERE NOT rental_duration = 6
+
+NOT IN
+
+Excludes multiple values
+
+WHERE rental_duration NOT IN (3, 6, 7)
+
+Comparison Operators
+
+!= or <> → Not equal
+
+<, >, <=, >= → Comparison operators
+
+3. Sorting Data
+
+ASC → Ascending order (default)
+
+DESC → Descending order
+
+ORDER BY rental_duration DESC;
+
+4. Wildcards with LIKE Operator
+Wildcards
+
+% → Matches any number of characters
+
+_ → Matches exactly one character
+
+Starts with A and ends with s
+SELECT city
+FROM sakila.city
+WHERE city LIKE 'A%s';
+
+Pattern Explanation: _s__d%
+SELECT city
+FROM sakila.city
+WHERE city LIKE '_s__d%';
+
+
+_ → 1st character can be anything
+
+s → 2nd character must be s
+
+__ → 3rd and 4th characters can be anything
+
+d → 5th character must be d
+
+% → Any characters after position 5
+
+📌 Important Note
+
+If you want to match a character in the middle of a word without knowing the length, SQL cannot handle this efficiently.
+
+This is easier in Python (regex or string operations).
+
+5. Handling Missing Data
+
+To find missing values, use IS NULL
+
+WHERE return_date IS NULL;
+
+6. Filtering Date Ranges
+WHERE return_date BETWEEN '2005-05-26' AND '2005-05-30';
+
+7. GROUP BY and HAVING
+Key Rules
+
+GROUP BY is used for aggregation.
+
+Anything in SELECT that is NOT an aggregate function must be in GROUP BY.
+
+HAVING filters aggregated results (used after GROUP BY).
+
+Example
+SELECT customer_id, COUNT(*) AS count
+FROM sakila.rental
+GROUP BY customer_id
+HAVING COUNT(*) <= 30
+ORDER BY count DESC;
+
+8. WHERE vs HAVING
+Clause	Applies At
+WHERE	Row level (before aggregation)
+HAVING	Group level (after aggregation)
+9. SQL Execution Order (Logical Flow)
+FROM
+JOIN
+WHERE
+GROUP BY
+HAVING
+SELECT
+ORDER BY
+LIMIT
