@@ -177,7 +177,15 @@ VALUES (1, NULL, 'SK', NULL); -- Fails (LastName cannot be NULL)
 
 ```sql
 ALTER TABLE company_db.persons
-ADD CONSTRAINT PK_Person PRIMARY KEY (ID);
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID); ---What changed internally
+Before
+ID had a UNIQUE constraint
+Table had no primary key
+
+After
+ID is now the PRIMARY KEY
+The old UNIQUE constraint is removed automatically
+MySQL creates a clustered index on ID (InnoDB)
 ```
 
 ### Foreign Key
@@ -278,3 +286,8 @@ SET SQL_SAFE_UPDATES = 0;
   * One-to-One
   * One-to-Many
   * Many-to-Many
+
+    ---------
+SELECT CONSTRAINT_NAME
+FROM information_schema.TABLE_CONSTRAINTS
+WHERE TABLE_SCHEMA = 'company_db' ---to know the constrainsts used 
