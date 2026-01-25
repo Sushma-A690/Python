@@ -290,4 +290,5 @@ SET SQL_SAFE_UPDATES = 0;
     ---------
 SELECT CONSTRAINT_NAME
 FROM information_schema.TABLE_CONSTRAINTS
+
 WHERE TABLE_SCHEMA = 'company_db' ---to know the constrainsts used 
