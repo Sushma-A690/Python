@@ -320,3 +320,5 @@ SELECT @@FOREIGN_KEY_CHECKS;
 A value of 1 means foreign key constraints are enforced, and a value of 0 means they are temporarily disabled.
 
 **SQL_SAFE_UPDATES** prevents accidental mass updates or deletes. It allows safe, targeted operations on specific records using a key or indexed column. For intentional mass updates or deletes, the operation will fail unless you temporarily set SQL_SAFE_UPDATES = 0.
+
+**CASCADE only works for row-level deletions, not for dropping the table structure.**
