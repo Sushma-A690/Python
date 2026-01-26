@@ -1,0 +1,70 @@
+BUILT IN FUNCTIONS
+strings-
+padding- extra spaces
+select title.LPAD(title,20,'*') AS left_paded
+from sakila.film
+LIMIT 5;
+if the string do not have 20 characters for the extra characters it will fill with * on left side as it is left padded
+
+select title.LPAD(RPAD(title,20,'*') AS left_paded
+from sakila.film
+LIMIT 5;
+
+SUBSTRING
+select title, SUBSTRING(title,3,9) as short_title from sakila.film;
+in sql the index starts at 1 in python it starts at 0
+
+Concatination- merging,first string,fun,last string
+SELECT CONCAT(first_name,'@',last_name) AS full_name from sakila.customer;
+REVERSE
+LEngth
+select email, SUBSTRING(email,LOCATE('@',email) +1) AS domain from sakila.customer;
+select email, SUBSTRING(email,LOCATE('@',email) +1),'.',-1) AS domain from sakila.customer;
+Select title,UPPER(title),lower(title) from sakila.film
+Select LEFT(title,1) AS first_letter,right(title,1) as last_letter,title,COUNT(*) AS file_count from sakila.film
+GROUP BY LEFT(title,1),right(title,1),title
+replace
+where-directly condition(hardcore) or wildcards(dynamic nature going at position level) 
+REGEXP-'[^aeiouAEIOU]{3}' in regexp use ^ for not
+in regexp we have to use $ instead of %
+where tile REGEXP '[eE]$'--gives only which ends with e or E
+for pdf - OCR to read data
+
+math
+
+sum,count,average
+floor,rand,power
+ceil--upper round off
+floor-lower round off value
+we can not use temporary data for another function in continuation to it .
+MOD-MODULUS-REMINDER
+
+Date TIME-day level,month level,year level,week level
+now() - INTERVAL 1 DAY
+
+where payment_date>= (
+select MAX(payment_date) - INTERVAL 10 DAY
+FROM sakila.payment
+);
+
+CURDATE-ONLY DTAE
+NOW()-DATE & TIME
+CURRENT_TIME- ONLY TIME
+
+casting from one type to another type with MySQL 
+from decimal to int
+int to string
+
+use different built in for different senarios ask gpt
+sub queries,joins,temp tables,ctes,views,stored procedures
+
+
+mon-assisgement,notes,practice diff built in functions secnarios on same databases
+
+
+
+
+
+
+
+
