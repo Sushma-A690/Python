@@ -292,3 +292,31 @@ SELECT CONSTRAINT_NAME
 FROM information_schema.TABLE_CONSTRAINTS
 
 WHERE TABLE_SCHEMA = 'company_db' ---to know the constrainsts used 
+
+Even when SQL_SAFE_UPDATES = 1 (safe mode is ON), MySQL still allows DELETE operations if the WHERE clause uses an indexed (KEY) column, such as a PRIMARY KEY. Safe mode is designed to prevent accidental mass deletions, not to block all DELETE statements.
+
+To delete records using non-indexed columns, safe mode must be turned OFF using SET SQL_SAFE_UPDATES = 0, or the query must include a LIMIT clause or an indexed condition.
+
+The SHOW CREATE TABLE and SHOW INDEX commands help identify PRIMARY KEY, UNIQUE, and other indexed columns in a table, which are treated as KEY columns by MySQL.
+
+example ** SHOW CREATE TABLE company_db.Persons;
+SHOW INDEX FROM company_db.Persons;**
+
+We can use **DROP INDEX ID ON persons; **to remove a redundant index on the ID column in the persons table when it has multiple indexes.
+
+**TRUNCATE**
+SET FOREIGN_KEY_CHECKS = 1 means MySQL enforces foreign key constraints. When this is enabled, you cannot DELETE or TRUNCATE a parent table if it is referenced by a child table, because doing so would break referential integrity.
+
+TRUNCATE therefore does not apply to a parent table that is referenced by a child table when foreign key checks are ON.
+
+If we still need to delete or truncate the parent table, we must temporarily disable foreign key checks using:
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+To verify the current status of foreign key checks, we use:
+
+SELECT @@FOREIGN_KEY_CHECKS;
+
+A value of 1 means foreign key constraints are enforced, and a value of 0 means they are temporarily disabled.
+
+**SQL_SAFE_UPDATES** prevents accidental mass updates or deletes. It allows safe, targeted operations on specific records using a key or indexed column. For intentional mass updates or deletes, the operation will fail unless you temporarily set SQL_SAFE_UPDATES = 0.
