@@ -1,0 +1,37 @@
+CARDINALITY-
+1-1-- when we get only 1 record basically 1 single output. user to user profile
+1-MANY user to order each user can have multiple orders 
+MANY-1 from order to user -many orders are placed by same customer 
+MANY- MANY- we use bridge table(friend_id) by joining to self (user) 
+while designing itself we have to create the friend_id table too for many to many
+
+
+mutilple sources to single query- sub queries
+in where condition
+has a column
+derived table-join
+co-related subquieres
+
+
+derived table-where-select
+subquery in select-where and all then subquery so basically the order of execution will change accordingly where you write in your query
+
+subquery- when you want just 1 column instead of the whole table
+
+in select itself
+
+Join-derived 
+
+subquery-dis advantage- confusion 
+
+because of ambiguity we use joins when a subquery gives multiple outputs where the actually query cant match
+co-related subqueries-- complex 
+subquer-query level exeution,can not access this outside of subquery 
+scope limited at query level,
+complexity will grow
+reusability-cant
+query execution time is more as it has to filter first 
+
+
+why,what,how,when-subqueries
+CTE
