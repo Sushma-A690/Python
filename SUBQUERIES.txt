@@ -6,11 +6,11 @@ MANY- MANY- we use bridge table(friend_id) by joining to self (user)
 while designing itself we have to create the friend_id table too for many to many
 
 
-mutilple sources to single query- sub queries
+multiple sources to single query- sub queries
 in where condition
 has a column
 derived table-join
-co-related subquieres
+co-related subqueries
 
 
 derived table-where-select
@@ -26,12 +26,15 @@ subquery-dis advantage- confusion
 
 because of ambiguity we use joins when a subquery gives multiple outputs where the actually query cant match
 co-related subqueries-- complex 
-subquer-query level exeution,can not access this outside of subquery 
+subquery-query level execution not access this outside of subquery 
 scope limited at query level,
 complexity will grow
 reusability-cant
 query execution time is more as it has to filter first 
 
 
-why,what,how,when-subqueries
-CTE
+MANY TO MANY---UBER USERS TO CAB DRIVERS,DOCTOR TO PATIENTS,
+ONE TO MANY ----- 1 
+bridge table--many to many --manager to employee
+we have employee table--emp_id,emply name.manager is also employee
+if i have to know who works under manager i need to know who is manager and then link 

@@ -1,0 +1,22 @@
+2/2/2026
+sub query-query within a query -select,in,dervied- we use at query level,COMPLEX-readability,reusability
+joins- join in at execution level -both are at query execution level
+
+CTE- reusability, readability fixed-it is a temporary result
+WITH (CTE NAME) AS
+recursive: keep on repeating - when we want to generate like 1 to 1000 numbers 
+Anchor member - initializing
+recursive member - condition to generate next number
+validation script also practice it -basically just focusing on the output and justifying/reconfirm directly passing it as a query and rechecking can confirm by checking random.
+disadvantages of CTE is scope as it executes at query level
+ 
+Temporary table - it is created on top of a folder -we use this as scope is increased at session level - this is i personally creating on my database it cant be shared/used by others
+
+VIEWS- Physical VIRTUAL TABLE-used for data abstraction(it will only give the name we assign to the column so we can avoid/ make it confidential)  - we can give access to ppl 
+in view query is stored not data when we execute the view using select it will go back to query and execute that query and retrieve data 
+
+stored procedures , query optimization, index- optimized way 
+database level - temporary table
+session level-cte
+for other to access for dashboards to ml - views 
+

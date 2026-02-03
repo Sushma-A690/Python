@@ -1,0 +1,29 @@
+1/29/2026
+
+
+MANY TO MANY---UBER USERS TO CAB DRIVERS,DOCTOR TO PATIENTS,
+ONE TO MANY ----- 1 application many users
+bridge table--many to many --manager to employee
+we have employee table--emp_id,emply name.manager_id .manager is also employee
+if i have to know who works under manager i need to know who is manager and then link so here manager table is bridge table-normalization. 
+Inner join sequence doesn't matter 
+LEFT join--here we should be careful with sequence 
+if we taking two tables
+to remove matching ones we use null
+example :
+SELECT ..FROM TABLE A A
+FULL OUTER JOINT TABLE B B
+ON A .KEY= B.KEY
+WHERE A.KEY IS NULL,OR B.KEY IS NULL
+FULL OUTER-all records from 2 tables
+CROSS join -
+normalization
+1NF--each column contrains only atomic values-multiple to single
+each entity should hold only in 1value
+2nf-- eliminates partial dependencies by using non primary key will rely only on t table to 2 tables,3nf--should follow 1&2, segregating more only the same would come under one table 
+power bi-denormalized
+database-normalized
+we have to normalize because everytime it has to go through all the records and multiple times depending on the scenario which is time consuming, slow,cost-time & space thats the reason we have to normalize the denormalized data
+
+
+we can use where exists instead of inner join for subquery 
