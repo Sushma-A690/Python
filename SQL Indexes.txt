@@ -1,0 +1,33 @@
+Non Clustered index
+medical records table 
+3 years - 1cr records - 6records of 1 person 
+we need an efficient way instead of going and looking each records to fetch those 6 records of a person 
+instead of going all records we can just go to that persons records
+primary-cluster index- physically order your data
+auto increment -can also start at any number need not to be 1
+EXplain -for query explanation
+type - ALL- it will look for all records as it doest have any primary key in the given where condition
+thats the reason we have to index - for non primary key 
+because for billion records its time consuming to process,filter ...
+NON clustered indexes-
+any table will have only 1 clustered key 
+we have create non clustered index for non primary key 
+so now type will be ref 
+and it will only check the records of only what you are asking for -basically it will create pointers and then link with the records 
+we can use multiple non clustered keys see if we want it with and one non clustered is enough as it has to justify both conditions 
+where as if we are using or its better to go with multiple non clustered keys 
+NATURAL key- SSN no that is naturally going to be unique,
+ Surrogate key - computer is generating/you are generating-employee id - it can be different for different companies
+phone number is surrogate key -if not you some one will have same if it is deactivated 
+all natural keys are primary keys because ssn are unique they can never be same
+but all primary key are not natural key because employee_id can also be a primary key but it is not going to always 
+all unique key are primary key --- have a look on this 
+
+
+To reduce/tuning 
+Use only specific cloumns to retrieve
+anaconda--Jupiter notebook/
+vscode--an extension of Jupiter notebook
+
+
+
