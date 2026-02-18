@@ -1,0 +1,60 @@
+day -4
+list - allows mutability,different data types-[]
+
+tuple- immutabale - stores different data types-()
+
+index,slicing,
+if we want to change the items in tuple we convert it to list first and then do the changes 
+tuple- employee names,id's,or email,pan num...
+list or tuple - allows duplicates so when we want unique then we will go with set 
+sets-ignores duplicates so no duplication-unordered-{}
+.discard()--if we want to remove something but not sure if it exists or not can use this ,this will ignore it if its not there instead of throwing error.
+index of someposition might not get same number
+
+Dictionaries-stores key value pair instead of index-{}- diff data types
+to read it my_dict['key1']
+my_dict={'key2':[12,13,16]}-----my_dict['key2'][1]
+nested dictionaries
+loop:
+how values stored in same variable for list to tuple conversion-- here we are not modifying the tuple we are giving the name same so basically we cant modifiy the tuple but we cant reassign to the same 
+ shallow copying,deep copying --
+shallow copy- replace original data
+import copy 
+original=[[1,2],[3,4]]
+shallow = copy.copy(original)
+shallow[0][0] =12
+print('original',original)
+print('shallow',shallow)
+-- output
+original [[12,2],[3,4]]
+shallow [[12,2],[3,4]]
+
+import copy 
+original = [[1,2],[3,4]]
+deep = copy.deepcopy(original)
+deep[0][0] = 12
+print('original',original)
+print('Deep',deep)
+for deep - it modifies the copy of original not directly original 
+
+print - it cant be reused or store basically cant reuse value
+return -
+def add_num(num1,num2):
+     return num1+num2
+result =add_num(5,6)--output 11
+print(resylt+4)-- 15
+
+
+mon-tues-basic python-done
+wed,thur-oops --25,26,27 python assign
+idea-application-python-ui --python start,sql,ml,genai,datawarehouse,-- prediction based
+
+before wed-
+example--youtube-podcast-captions-summary-fat check part -using agentic ai .
+web application - bts fan
+
+
+
+
+
+

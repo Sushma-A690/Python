@@ -1,0 +1,22 @@
+stored procedure
+login-username,pass -goes to database
+parametrizing -taking input parameters & filtering if it correct
+stored procedure - basically functions in python- for reusability of same operations. Multiple times to execute same operation
+
+CREATE PROCEDURE name (IN cid INT)
+delimeter // ---start
+stored procedure
+// ---------end
+for calling output when mentioned in storedprocedure we should use @
+information schema--metadata --information about tables 
+cursor-loop
+email id generation,first_name-last_name -- practice with stored procedures--dynamic stored procedure 
+
+
+
+till stored procedures we gonna have test 
+indexes tomorrow 
+portioning,row index,rank--should explore 
+
+
+

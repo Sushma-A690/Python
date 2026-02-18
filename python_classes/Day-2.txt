@@ -1,0 +1,79 @@
+python-2
+Loops:
+For,while
+while - dont know the starting & ending- we dont define no of iterations - it will iterate until the condition satisfies
+for - we know starting & ending values -we will give how many times to iterate 
+first 100,even or odd
+in normal terminology
+list of num - sum
+read inputs given-1 2 =3 ,1+2 =3 store variable = sum,adding,return .
+numbers = [1,2,3,4...,9,10]
+sum = 0 
+for i in numbers: # iterate over the list 
+ sum +=i
+ print(i)
+print(sum)
+
+index starts from 0,length starts from 1 
+range will not include upper limit value 
+so x=[1,2....,10]
+total = 0
+for i in range(len(x)+1):---here we are considering index --because range works with index so when we do range(len(x)) it would be range(1,10) we know range excludes upper limit so we have to add that as well so we go range(len(x)+1) now we will also get the last digit 10.
+for reverse define this empyty string first so the alphabets adds on ''
+c + ''+'c'
+h+'c'='hc'
+a+'hc'='ahc'
+
+n=11
+i=1
+while i<= n;
+i=i+1
+print("the sum is",sum)-- we have to break the loop (so we have give a condition to get true)otherwise it will loop forever & crash the system
+
+while -we go with condition until it statisfies it loops after it satisfies it will fail so it will come out of loop
+count = 5
+while count>= 0:
+print("countdown:', count)
+count -=1
+print
+
+Break:
+for val in "string":
+    if val =="i":
+      break
+    print(val)
+print("the End")
+
+continue: it will exclude that particular value and continue with next ones 
+to stop at a specific condition
+
+should use counter to break the forever loop  -- user break the forever loop 
+random 5 -for loops and 5 -while loop like palindrome,pattern,--interview questions
+ques-input-what is needed -basically English -then implement it .
+for loop :
+1️⃣ Print numbers from 1 to n
+n = 8
+for i in range(1, n+1):
+    print(i)
+2️⃣ Print even numbers from 1 to n
+N = 12
+for i in range(0, N+1):
+    if i % 2 == 0:
+        print(i)
+3️⃣ Print odd numbers from 1 to n
+N = 10
+for num in range(1, N+1):
+    if num % 2 != 0:
+        print(num, "is odd num")
+4️⃣ Print the first N even numbers
+N = 6
+for j in range(1, N+1):
+    even = j * 2
+    print(even)
+5️⃣ Print the first N odd numbers
+N = 5
+for i in range(1, N+1):
+    odd = 2*i - 1
+    print(odd)
+
+

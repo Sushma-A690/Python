@@ -1,0 +1,24 @@
+PYTHON-1
+SQL-database query language only interacts with structured data
+python- 
+tensor flow,pytorch-dealing more than 2d data/multi dimensional
+anaconda navigator-different tools- Jupiter notebooks
+vs code-terminal-execute
+markdown-for text in Jupiter you select it near code
+a=9 a is variable
+type(str(z))---type casting 
+b1=true --Boolean
+x= 5 
+x= +5 -- x= 5 here +5 mean positive 
+x = -5 -- x = -5 here -5 means negative
+x + = 5-- x =x+5
+int(input("enter your name: "))-- for input 
+f string
+branching if/elif/else
+jango-flask api
+
+DE-WEB PAGES,API-SFTP LOCATION,FOLDER LOCATION,DWH-BUILT ON SNOWFLAKE/CLOUD/SFTP LOCATIONS
+DS-
+
+de-sources-healthcare-claims adjuster-his insurance members/provider -webapplication-implum-work--built etl-read data from dwh-transformatons-output-csv files-automated-send to different clients-datastage,azure for,ctrl m,plum,
+data science-recommendation model-automobile manufacturing unit-spare parts of automobiles,lubricants,databse dwh-all historical data-they buyfrom diff loc,diff types,sub cat,super cato-to buy,model will read historical data -will work as collaborative model-understands patterns and recommends them-chatbox built for educational institute -pdf files of content -

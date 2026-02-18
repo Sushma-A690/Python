@@ -1,0 +1,38 @@
+Python-3
+indexe's
+Indexing:
+s= 'Hello world'
+s[0:5:2]----starts from 0 ,end 
+s[0:]
+s[:6]--upper limit will also not include in slicing 
+s[-5]-- the starts from -1 basically the last char of a string here 
+: - direction
+::-direction & order
+
+Mutable
+Immutable-once you create the string you will not be able to change/modify
+so -immutable-string,tuple 
+string concatination= + or we can use concat for string 
+to permanently update something we have to store it first
+. upper,.lower,.split(),
+when we use split at some particular character -- it will not print that character so we use partition-- .parti so it prints along with that char
+.count()-counts the char
+.find()-gives index
+isalnum---returns true -- if its alphabetic
+.isspace()-- to check empty space
+.istitle- first char should be caps 
+.endswith --gives true or false
+
+popp- by default removes last index but we can also specify the index we want to 
+.sort-- by default asc,alphabetic order if we give both at once we can will get numb first sorted then alphabets basically it follows with askey-- have a look on this
+
+matrix[0][1]--0,0 0,1 0,2
+              1,0 1,1  1,2
+              2,0 2,1   2,2
+
+List comprehensions:
+
+lists--- .append(),count(),.extend([4,5])--we can use list of values so its prints like l=[1,2,3] l.extend([4,5]) it will give l=[1,2,3,4,5] whereas if we do the same with append it gives [1,2,3,[4,5]], .remove()
+
+tuples,sets,dictanories
+

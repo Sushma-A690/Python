@@ -1,0 +1,69 @@
+Day - 5
+def num():
+   return[1,2,3,4,5,6]
+x= num()
+x # its stores entire data at once in memory and then prints
+
+x=[1,2,3,4,5,6]
+for i in x:
+    print(i) # here it iterates
+
+inside for loop it uses iter & next
+create iter & then use next for each element in it
+Generator-
+Fibonacci
+def genfibo(n):
+a=1
+b=1
+for i in range(n):
+yield a #yield will do is -create generator obj like iterator obj , instead of always using iter,next we use yield,so probably only a values will be printed
+a,b=b,a+b # logic for Fibonacci
+
+genfibon(5)--- creating generator in specific 
+for num in genfibon(12):
+   print(num)
+
+iterator,generator are for memory efficiency 
+we have to depend on for loop than iter we want to skip the first char ..
+
+map & reduce
+we can create a function
+then instead of for loop we can directly use map 
+map(function,values)
+lambda--- when we want to create just 1 time not reusing any where else
+lst =[1,2,3,4,5]
+list(map(lambda x: x+1, lst))
+# out put [2,3,4,5,6]
+
+list(map(lambda x: x*x, lst))
+# output [1,4,9,16,25]
+
+you cant reduce using map
+Reduce -- here we are reducing to single value
+x= lambda a,b:a+b
+print(x(4,3))
+# output 7
+
+from functools import reduce
+lst =[1,2,3,4,5,6]
+reduce(lambda a,b:a+b,lst)
+basically using reduce we only get 1 value 
+
+filter -- filter out all the data and prints the values 
+def even_check(num):
+   if num%2==0:
+     return(
+
+real time:
+list comprehension: puts everything into single list of values
+lambda-dynamic function 
+employee age -- map to know yes or no
+all expenditure of a person debit and credits -- reduce 
+
+
+file operations,try catch exception handling ,modules,inbuilt libraries-- core python will be done .
+
+map plot ,user inputs store into files and databases,analytics,history data 
+
+
+
