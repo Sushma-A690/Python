@@ -1,0 +1,67 @@
+Day -6 
+Modules & Libraries:
+builtin functions importing as library
+statistics,sys,os,math,.choice,.randit,dir(math)-- prints all of math
+created custom module 
+created in mymath.py file 
+def add(a,b):
+    return a+b
+
+used in test.py file 
+import mymath
+print(mymath.add(4,7))
+
+Errors & Exception Handling
+try:
+    printf("Hello)
+
+
+
+f= open('testfile.txt,'r')
+f.write('test write this')
+
+except IDError:
+   print("Error: Could not find file")
+try,except,finally-- basically finally will execute with successful try or successful except
+
+file operations:
+txt,csv,excel...files
+with open(r" ","w","a"--append
+
+
+write--overwrites the content 
+
+append- will append at the end 
+
+readline--single line ,readlines-multiple lines
+copy-r & w
+.seek-- we can explicity metion the position where we want to add otherwise by default takes first position of a file .
+r+ -- read this write mode you dont have to mention w 
+
+excel files,csv-- df
+data frame--data structure stores in tabular format json to df and stored in tabular form we will get it from pandas
+excel--write-- to_excel,read--read_excel
+
+import sqlite3-
+db = sqlite3.connect("my_database")
+db.execute(whatever you want to execute)--.execute -- after creating table you can check it in path 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

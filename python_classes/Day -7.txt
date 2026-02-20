@@ -1,0 +1,32 @@
+Day -7 
+class,object
+__init__--object constructor
+def__init__(self,name,surname,year_of_birth)
+if multiple inputs are being given 
+then that has to known for whom we are considering right so that instance is passed to self 
+alec = person("alec","Baldwin",1958)
+functions created in class are called methods 
+__str__ -- print(object) so you dont have to call -- user-friendly --for users
+__repr__ --gives in dictanorie format --debuf friendly -- for developers
+Abstraction-- protect data 
+_ single underscore is easily accessible for hackers too 
+__ for double when we use double we have call using _ single underscore class name and along with it double underscore method name
+outside people will never know your logic in the method this way.
+__dict__ --method 
+
+Inheritance:
+class Student(Person): --student is child,person is parent
+     def __init__(self,student_id,*args):
+          super(Student,self).__init__(*args)
+     super --to use properties from parent class 
+Overriding-- Replacing the behavior of an existing method (usually in a parent class) with a new version in a child class.
+*args-positional arguments--order of passing data in positional way that you created in method
+**kwargs-- key word arguments-- basically we can give values irrespective of order 
+example 
+def name(firstname,lastname)
+print(firstname=Sushma,lastname=a)
+
+we can give manually what type of data we want to by explicitly mentioning it inside the method
+--
+
+read data,analytics,store data in datawarehouse,streamlit 
