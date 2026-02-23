@@ -1,0 +1,55 @@
+Day - 8 
+Encapsulation:
+1 function inside another achieving abstraction
+composition:
+class Engine:
+      def start(self):
+        print("Engine starting..")
+
+
+
+
+Dynamic Extension: based on our requirement 
+Class Text:
+    def render(self):
+        return "Hello"
+
+Polymorphism and DuckTyping/DynamicTyping:
+
+explicit conversion--using while calling print(summer(1,int("1)))
+class variable/global variable,instance variable/local variable
+when we change global variable it will follow that for further but for instance only at that particular instance it will update the rest gonna be same as previous .
+
+we can use class variable across the instances but not a instance variable across class or other instance's
+class method-cls-will only take class variable it cant take instance variables
+instance method-
+staticmethod- to do operations -- for credits or debits for total amount we can use that operation here before we perform other big calculations.
+Decorator --without changing the functionality of a function but performing something else in between 
+
+dataclasses -library- we use this if we want to restrict the type at the input level itself
+SRP-single Responsibility Principle:we should create class for only one purpose otherwise when anything fails its hard to fetch where we are failing because of dependency .
+
+
+building projects or upi applications- when having multiple code 
+realtime-class and obkects in production level .
+
+
+MON-TUES Data visuvalization.
+
+
+
+draw.io for flowchat
+
+tech stock-
+how many hours spect 
+how its working in realtime
+what you are trying to do 
+maintain index,tablecontect,page numbers,then push to git --like an actual project .
+
+
+
+
+
+
+
+
