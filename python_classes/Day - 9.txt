@@ -1,0 +1,55 @@
+day - 9
+matplot,seaborn,plotly,cufflinks-for visualization in python 
+pandas
+
+head will give top results-by default 5
+matplotlib--using plot-2d line chart
+kind='bar'--gives bar chart
+plot.barh-bar chart with horizontal
+plot.scatter--data points-variance,corelation of data points -basically for statistics-basically to know how the data is being distributed 
+plot.pie-we can also do sub plots
+pandas.plotting import andrews_curves
+map also we can generate -mapplot--not sure
+the above all are 2d
+for 3d-cufflinks,plotly--iplot
+kind='box'-for outlayers -5 parameters-max,medium,q1,q3,min
+kind='area'
+kind='surface'--3d
+scatter3d
+bubble3d
+heatmap-talks about correlation -when considering ai/ml we check correlational ex:age,expierence-as age increases expierence also increase so instead of two we can just use service of expierence.
+pandas-csv,excel data files creates data structure called data frame
+numpy-deals with numerical operations
+
+we can use .dtypes-to know each data type of column
+dtype== "object"--gives true or false,true for the text columns
+.dtypes=="object".index --gives all the true one's in list with index ordered
+
+.describe()-count,unique,top,freq 
+.describe()-for numeric -count,mean,std,min,25%,50%,75%max--for both above and below count gives the count of unique items
+NAN--how do we remove
+isnull()-checks null
+we cant train a model with missing data -either we remove the column,or replace with mean,medium or anything
+
+.series--you can explicitly give index or by default it will take from 0 in the table
+
+recommendation system automobile industry--on what basis 
+3 yrs of historical data -how they buying in quantity
+first we have to understand -the data ,small tier ,big tier,how many he buys ,category-sub,super,region come from same loc,shipping to same loc,same warehouse..any items buying in combination oil+grease or any other patterns,revenue he is generated...
+all these we have see in pandas
+how you wanna frame ques,and derive ans-- we use pandas,numpy
+iloc-filter data using index position-df.iloc[0]
+loc-when we want explicity filter at the label level -position filtering -df.loc['c','w']--its goes at c th row,w th column
+when we know particularly at what point we want to filter we go with loc 
+df.reset_index()---so the previous index that we explicity mentioned will be a column now and the index is gonna create again from 0
+.dropna--drops NAN values
+.fillna-- to fill the NAN values
+.groupby
+.transpose()-- columns will rows,rows will be columns
+
+merging--.merge
+
+
+
+
+

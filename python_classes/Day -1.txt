@@ -16,6 +16,7 @@ int(input("enter your name: "))-- for input
 f string
 branching if/elif/else
 jango-flask api
+Boolean expressions are created with the keywords and, or, not and is
 
 DE-WEB PAGES,API-SFTP LOCATION,FOLDER LOCATION,DWH-BUILT ON SNOWFLAKE/CLOUD/SFTP LOCATIONS
 DS-
