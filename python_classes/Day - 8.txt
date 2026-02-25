@@ -40,11 +40,11 @@ MON-TUES Data visuvalization.
 
 draw.io for flowchat
 
-tech stock-
+tech stack-
 how many hours spect 
 how its working in realtime
 what you are trying to do 
-maintain index,tablecontect,page numbers,then push to git --like an actual project .
+maintain index,tablecontext,page numbers,then push to git --like an actual project .
 
 
 
