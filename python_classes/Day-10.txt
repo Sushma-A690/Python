@@ -1,0 +1,73 @@
+Day-10
+Data Science-built on statistics
+pandas-helps reading data,exploring it,understanding data-diff datatypes,distributions,outliners,
+
+Statistics-Analyze data and make conclusions out of it .
+Statistics-Descriptive-organize and summarize using numbers & graphs
+Inferential-experiment then it will say correct or not .
+How many people like blue car in 1L people-we cant go to each person and ask them-so we randomly ask 100/200/sample of people and from this if 20 like in 100 then 20% is descriptive statistic's
+margin error 2%
+
+population-raw data-1L
+100 becomes sample data here
+variable-height,weight of a person
+data(singular)-65kg/5'5"
+data(plural)
+parameter
+
+Types of Data-categorical,Numerical-Discrete-fixed num-grades,Continuous-heigh,weight-they change.
+Qualitative,
+Quantitative-
+-Nomial-cant rank ex:seasons - basically cant compare
+Ordinal-we can compare & rank them basically rating of food.
+
+Quantitative-Interval,Ratio
+
+qualitative- Sushma's ,eye color,hair ,--discriptive--categories from my dataset-food,grocery,
+quantitative-height,weight-numerical data--no of transactions done in a day
+in this again i have to go for nominal,ordinal.
+
+categorical data straight forward-yes/no.
+num-find pattern behind
+heights/weights of people how it is being distributed-no of quality sold more in any season or time.
+Central Tendency--MODE,MEDIAN,MEAN
+customers-buying with specific prices-on average recommend 
+
+he bought 10 items with at a range 4,5,6,4,,4,6-- we go with mean
+4,5,6,4,5,6,12,18,98,120,2--when we have extreme data outlayers -we usually remove these but if we have to have these then we go with median- it will with sorting so comparatively we get lesser value than mean
+mode-no of occurances 
+Measure of Dispersion-spread
+Range,Variance,Standard Deviation
+range is straight forward 113,170 range is 57
+Variance-measure of dispersion in data-calculates distance from central tendency to data points . if variance is high -far from central tendency.
+Standard Deviation- 
+Bell curve-symmetrical if mean=median=mode
+asymmetrical-mean <median,mode -basically -skewed to right.
+skewed to left is -ve skewed
+very less people will fail-so less people on left side
+
+in real time we try to achieve symmetric as it is initially skewed to left or right 
+
+data-falls between min to q3 is normal 
+after q3 is considered as outliners.so basically from q3 to max in box .
+over fitting will happen if we consider outliners.
+EDA-exploratory data analysis -we understand 
+RANDOM Variables
+sets
+complement.
+variance- will just tell you 120,8 centeral is at 5 it will tell how much is variance
+sd-it will give step size -spread of data points-based on this we gonna consider if we should go with centeral tendency
+sd is calculated in same way of variance 
+weight sample of 10- 3 with 52,53,54 ,
+10
+variance talks about outlieners 
+in data science we do not use much on inferential - explore tests we perform on this.
+excel-statistics-understand how its done.
+
+
+
+
+
+
+
+
