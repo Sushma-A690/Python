@@ -1,0 +1,23 @@
+supervised-regression,classification
+unsupervised
+regression-for continuous
+descrete-0,1-labeled class-classification
+Regression-linear,randon forest,decision tree
+
+
+data selectio from multiple data sources-EDA to know the story of data& features, data transformation, and selection of machine learning ,test we gonna do with this data for training its the validation data saving final model in dot pickle file 
+linear independent variable input feature 
+dependent 
+residual-distance from actual data point to best fit line:
+calculate cost fun-gradient descent-to find the new weights &best fit line
+apoc-sample-
+local minima,global minima
+
+Tss-total sum of square-100%
+rss-residual sum of square-25%
+ess-explained error-75%
+if your model can rexplain 75% of data 
+r2-m1+x1+m2+x2...
+
+we take median for any skewness
+but mean when there is low/negligible outliers only why to take less value coz it will still creates a skewness again.

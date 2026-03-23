@@ -1,0 +1,275 @@
+SVM:
+Hyperplane may not have equal distance to the supporting vectors because the supporting vector may be spread with the same distance.
+it will recalculate the distance 
+🔹 1. Support Vector Machine (SVM)
+Hyperplane
+Decision boundary separating classes
+Support Vectors
+Closest points to hyperplane
+Key Idea
+Maximize margin between classes
+Important Note
+Ideally equal distance on both sides
+If not:
+Model adjusts using optimization
+Uses soft margin
+---
+
+
+sentences-tokens-basically words
+pos-parts of speech-pos tagging nlp 
+stop words-not necessary -excluding from our sentences.without these also we can process these to the data .--more on vector embeddings/token.
+stemming & lemmatization-root words
+mapping group of words to same stem without suffix/prefix.but the base word may or may not have correct grammatical meaning.
+snowball stemmer is current one that performs better than porter & l
+lemmatization-it will take more time so use only where you want to be more accurate coz it gives root word but with meaning.
+NER-named Entity recognition is classified model
+it can not understand schematic meaning
+for ex: apples are distributed in apple
+here it either takes apple as either fruit or company for both cases.
+Word Vectorization:
+vector embeddings.
+BOW-BAG OF WORD-counts the frequency of its appearance.
+n-gram model-
+term frequency= no of times a word appears in the document/total no of words in the document.
+inverse document frequency=log(no of documents/
+all these just tells about the count of word occurrence but ignores schematic meaning.
+
+understand transformer architecture.attention is all you need -40 min along with that go through the paper how feed mass attention,encoder,decoder-prepare the own notes just the architecture-how knp passed,consumed ,how it wordks,encoter based models,birth model architecture- architecture,components,how it works why it works-architecture llm works,optimization on llm ,fine tuning the llm .transformations.
+------------------------
+
+🔹 1. What is NLP?
+
+Natural Language Processing (NLP) is a field of AI that enables machines to:
+
+Understand
+Interpret
+Process
+Generate human language (text or speech)
+
+👉 It acts as a bridge between human language and machines
+
+🔹 2. Why Do We Use NLP?
+
+We use NLP because computers cannot understand raw text directly.
+
+Key Reasons:
+Convert text → structured data
+Extract meaning and insights
+Automate language-based tasks
+
+Real-world Applications:
+Chatbots (like ChatGPT)
+Sentiment analysis (reviews, feedback)
+Spam detection (emails)
+Machine translation (Google Translate)
+Search engines
+
+🔹 3. NLP Pipeline (Basic Flow)
+Raw Text → Preprocessing → Feature Extraction → Model → Output
+
+🔹 4. NLP Basics
+Tokens
+Sentences → broken into words (tokens)
+
+Example:
+
+"I love NLP" → ["I", "love", "NLP"]
+
+POS Tagging (Parts of Speech)
+Assigns roles:
+Noun, Verb, Adjective, etc.
+
+Stop Words
+Common words:
+“is”, “the”, “and”
+
+✅ Removed to:
+
+Reduce noise
+Improve efficiency
+
+🔹 5. Stemming vs Lemmatization
+
+1. Why Stemming & Lemmatization?
+
+We use stemming and lemmatization to normalize words so that different forms of the same word are treated as one.
+
+✅ Why needed?
+Reduces vocabulary size
+Improves model efficiency
+Helps models learn better patterns
+Example:
+“run”, “running”, “runs” → treated as same word
+🔸 Stemming (Why?)
+Fast and simple
+Useful when:
+Speed matters
+Exact meaning is not critical (e.g., search engines)
+🔸 Lemmatization (Why?)
+Preserves actual meaning
+Useful when:
+Context matters (chatbots, NLP tasks)
+🔹 One-line:
+Stemming → fast but rough
+Lemmatization → slow but accurate
+🔹 2. Why Snowball Stemmer > Porter Stemmer?
+Porter Stemmer
+Older algorithm
+Uses basic rule-based suffix stripping
+Sometimes produces incorrect stems
+
+Example:
+
+“relational” → “relat” ❌
+Snowball Stemmer
+Improved version of Porter
+More consistent and accurate
+Supports multiple languages
+Better handling of suffix rules
+
+✅ Why Snowball is better:
+Fewer errors
+Cleaner stems
+More modern and optimized
+🔹 One-line:
+Snowball = improved, more accurate version of Porter
+
+Stemming
+Removes suffix/prefix
+May not give valid word
+
+Example:
+
+running → run  
+studies → studi ❌
+Fast but less accurate
+Snowball Stemmer > Porter Stemmer
+
+Lemmatization
+Converts to meaningful root word
+
+Example:
+
+running → run  
+better → good
+Slower but more accurate
+Use when meaning matters
+
+🔹 6. Named Entity Recognition (NER)
+A classification task
+Identifies:
+Person, Location, Organization
+Limitation
+Cannot fully understand semantic meaning
+
+Example:
+
+"Apples are distributed in Apple"
+May confuse:
+Apple (fruit)
+Apple (company)
+
+🔹 7. Word Vectorization
+Converts words → numerical vectors
+Required for ML models
+
+🔹 8. Bag of Words (BoW)
+Counts word frequency
+
+Example:
+
+"I love NLP, I love AI"
+
+I: 2  
+love: 2  
+NLP: 1  
+AI: 1
+Limitation
+No word order
+No meaning (semantics)
+
+🔹 9. N-grams
+Captures word sequences
+
+Types:
+
+Unigram → 1 word
+Bigram → 2 words
+Trigram → 3 words
+
+Example:
+
+"I love NLP"
+
+Bigram → ["I love", "love NLP"]
+
+🔹 10. TF-IDF
+Term Frequency (TF)
+𝑇𝐹=word count in document/total words
+
+Inverse Document Frequency (IDF)
+𝐼𝐷𝐹=log(total documents/documents containing word)
+
+Purpose
+Highlights important words
+Reduces weight of common words
+
+Key Limitation of Traditional NLP
+
+Methods:
+
+BoW
+N-grams
+TF-IDF
+
+❌ Only focus on:
+
+Word frequency
+
+❌ Ignore:
+
+Context
+Semantic meaning
+
+NLP → helps machines understand human language
+Used for automation and extracting insights
+Preprocessing → tokens, stop words, POS
+Stemming vs Lemmatization → speed vs accuracy
+Traditional vectorization → no context awareness
+
+11. Why LLMs Came into the Picture?
+
+Traditional NLP methods (BoW, TF-IDF, etc.) had major limitations:
+
+❌ Problems with Traditional NLP:
+No understanding of context
+No semantic meaning
+Word order often ignored
+Struggles with ambiguity
+
+Example:
+
+“bank of river” vs “bank account”
+→ Treated similarly ❌
+✅ Why LLMs (Large Language Models) were introduced:
+
+LLMs solve these problems by:
+
+Understanding context
+Capturing semantic meaning
+Handling long dependencies
+Generating human-like text
+🔸 How they do it:
+Use transformers
+Use attention mechanism (Q, K, V)
+Generate contextual embeddings
+🔹 Real Impact:
+Chatbots (ChatGPT)
+Code generation
+Translation
+Summarization
+🔹 One-line:
+LLMs came to overcome the lack of context and meaning in traditional NLP methods
+ 
+

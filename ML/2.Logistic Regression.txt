@@ -1,0 +1,51 @@
+
+Logistic Regression:
+multicollinarity talks about both magnitude and direction.
+softmax-for multi in logistic regression.
+decision boundary line-divides data on left to 1 class,on right to another class
+using sigmoid we gonna classify them to 0's or 1's-using threshold value.
+for multi -when we have 3 lables cat,dog,donkey-0,1,2--we gonna use softmax-it will convert those in 0-1 probability scores .0.3,0.6,0.8 something like this.
+confusion Matrix-actual values-ground truth lable
+
+true positive-both ground tooth(actual values) & predictated are same values
+true negative-both false
+false positive-actual value -ve but model predicted +ve
+false negativite-actual value +ve but model predicted -ve
+so for the model we are building we have to make sure false positive/false negative are minimal or zero if possible.by increasing data.
+Accuracy-how many actual TP,TN -TOTAL percentage we gonna calculate
+TP-True positive
+TN-true negative
+Recall-will tell you -from total no of positive results how many are actually positive.
+TP/(TP+FN)
+Precision-TP/(TP+FP)--this is 1-specificity
+
+F1 Score-handle both precision& recall
+this will tell you how much your model actually performed
+Thrteshold-linear run 0 to1 logistics dec
+we fidn  threshold then decuide which class it will go
+green-1
+red-0
+random th
+true positive max,false positive-min is threshold value we 
+
+Threshold value -to fix the threshold value it comes from ROC curve.
+AUC CURVE- checking roc for different regression linear/logistic/randonforest... and then plotting it in auc -area covered under that roc so basically we will go with and thats how we gonna get the threshold value and go with t
+
+
+DECISION TREE-WHY,HOW,DIFFERENT PRONING ,ROOT NODE,ENTROPY CALCULATED,GENIE INDEX 
+WHY DECISION TREE OVER LOGISTIOCS AND LINEAR
+Random forest-
+ensembling techniques
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,241 @@
+static embeddings-
+contextual embedding- FROM QUERY,KEY,VALUE
+output of encoder is contextual embeddings.
+training & then real world problem inference.
+BERT-only encoder part -contextual embedding-760 FOR STATIC
+GPT-12,000 FOR STATIC
+DURING TRAINING WE GENERATE STATIC WORD EMBEDDING 
+for train model wq will not change --query vector 
+back propogation,chain role
+
+
+query-
+ex:I made a sweet Indian rice dish called
+for each word we have an static embedding.
+now these are multiplied with special matric called wq
+wq.e1=q1
+columns of first * rows of second from this we get query vector
+we get wq after training it will not change after train model 
+so now this wq dot static embedding of each at a time of a word gives  query vector of each word .
+to get the wq,wv, first the model that is fed is semi supervised calculate error & back propogation,chain rule -deep learning fundamentals.
+during the back propagation the wq,wv will be finalized inside the model.
+coming to key vector 
+i made a sweet Indian rice dish called
+same here also we use the wk.e1=k1,wk.e2=k2...
+now q1.k1 we get a single number for all tokens
+
+I-q1-k1----k1.q7-single value  
+made-q2-k2----k2.q7
+a -q3-k3---k3.q7
+sweet -q4-k4-----k4.q7
+Indian -q5-k5-----k5.q5
+rice -q6-k6----k6.q6
+dish -q7-k7---k7.q7
+called-q8-k8---k8.q8
+value vector same positionembedding(static embedding) the 
+wv.e1=v1,wv.e2=v2
+
+
+attention(q,k,v)=softmax(qkt/sqrtdk)V
+
+position embeddings-attention head wq,wk,wv--context aware embedding ec
+
+soft max-it will convert the discrete values into probability distributions-q(kt-ktranspose)
+
+
+so we will be having multi attention head - focusing on different aspects or types of relationship between tokens 
+(sematic,positional,syntactic) simultaneously enriching the contextual understanding of each token
+
+it can verb,pronoun, 
+feed forward network-enriches each tokens embedding by applying non linear transformations independently,enabling the model to capture complex patterns & higher order features beyond contextual relationships.
+normalization layer ensures stable learning improving the gradient flow
+
+out put of encoder is contextual embedding  which we give as input for decoder 
+multiheaded cross attention- query is different here where as v,k are from encoder 
+
+
+poloclub.github.io/transformer-explainer/-link
+------------
+
+
+
+
+📓 Transformer & Embeddings – Notes
+🔹 1. Types of Embeddings
+Static Embeddings
+Each word has a fixed vector representation
+Same word → same embedding always
+Example:
+“bank” (river) = “bank” (finance) ❌ same vector
+Generated during training phase
+Do not change during inference
+Contextual Embeddings
+Word meaning depends on context
+Same word → different embeddings based on sentence
+Example:
+“bank of river” ≠ “bank account” ✅
+Generated using attention mechanism (Q, K, V)
+🔹 2. Model Architecture Basics
+Encoder Output
+Output of encoder = Contextual Embeddings
+Model Differences
+BERT → Uses only encoder
+GPT → Uses only decoder
+🔹 3. Training vs Inference
+Training Phase
+Learn parameters:
+𝑊𝑞,𝑊𝑘,𝑊𝑣	​
+
+Done using:
+Loss calculation
+Backpropagation
+Chain rule
+
+✅ After training:
+
+These matrices are fixed
+No change during inference
+
+Inference (Real-world usage)
+Input sentence → embeddings → attention → output
+
+🔹 4. Step-by-Step Attention Flow
+Example Sentence
+I made a sweet Indian rice dish called
+
+🔹 5. Step 1: Static Embeddings
+
+Each word → embedding:
+
+e1 → I
+e2 → made
+e3 → a
+...
+e8 → called
+
+🔹 6. Step 2: Query, Key, Value
+Query Vector
+𝑞𝑖=𝑊𝑞⋅𝑒𝑖​
+
+Key Vector
+𝑘𝑖=𝑊𝑘⋅𝑒𝑖
+
+Value Vector
+𝑣𝑖=𝑊𝑣⋅𝑒𝑖
+	​
+
+🔹 7. Matrix Multiplication Logic
+Multiply embedding with weight matrix:
+Wq × e1 = q1
+Wq × e2 = q2
+...
+
+Same for:
+
+𝑊𝑘​→ keys
+𝑊𝑣→ values
+
+🔹 8. Attention Score Calculation
+
+Dot product:
+
+𝑞𝑖⋅𝑘𝑗
+
+Example:
+
+q7 ⋅ k1
+q7 ⋅ k2
+...
+q7 ⋅ k8
+
+➡️ Gives importance of each word relative to word 7
+
+🔹 9. Attention Formula
+Attention
+(𝑄,𝐾,𝑉)=Softmax(𝑄(𝐾^T)/sqrt(dk))𝑉
+
+🔹 10. Softmax
+Converts scores → probabilities
+Higher score → higher importance
+
+🔹 11. Position Embeddings
+Added to static embeddings
+Helps model understand:
+Word order
+Sequence structure
+
+🔹 12. Multi-Head Attention
+Multiple attention heads run in parallel
+Each head learns:
+Semantic relations
+Positional relations
+Syntactic relations
+
+✅ Result:
+
+Rich contextual understanding
+
+🔹 13. Output of Attention
+Produces context-aware embedding (Ec)
+
+🔹 14. Feed Forward Network (FFN)
+Applied independently to each token
+Adds:
+Non-linearity
+Complex feature learning
+
+🔹 15. Normalization Layer
+Stabilizes training
+Improves gradient flow
+Prevents exploding/vanishing gradients
+
+🔹 16. Encoder Output
+Final output = Contextual Embeddings
+Passed to decoder
+
+🔹 17. Decoder – Cross Attention
+Key Difference:
+Query (Q) → from decoder
+Key (K), Value (V) → from encoder
+
+➡️ Helps decoder focus on relevant input words
+
+🔹 18. Key Summary
+Static embeddings → initial representation
+Q, K, V → learned via training
+Attention → builds relationships between words
+Multi-head → captures multiple relationships
+FFN → enhances features
+Encoder output → contextual embeddings
+
+In transformer models, each word in a sentence is first converted into a static embedding and combined with positional information to retain word order. These embeddings are then passed through learned weight matrices to generate query, key, and value vectors. The core idea is that each word’s query vector interacts with all other words’ key vectors using a dot product to determine how much attention it should pay to them. These attention scores are normalized using softmax to form probabilities, which are then used to weight the value vectors, producing a context-aware representation of each word. This process is repeated across multiple attention heads to capture different types of relationships such as semantic and syntactic dependencies. The output is further refined using feed-forward neural networks and normalization layers, resulting in rich contextual embeddings that understand the meaning of words based on their surrounding context.
+
+Semantic = meaning of words/sentence
+Focuses on what the sentence is trying to say
+Example:
+“I ate an apple” vs “I ate a fruit”
+→ Same semantic meaning (apple is a fruit)
+“bank”:
+river bank
+money bank
+→ Different semantic meanings
+
+Syntactic = sentence structure / grammar
+Focuses on how words are arranged
+Example:
+
+“She is eating food” ✔️ (correct syntax)
+“She eating is food” ❌ (wrong syntax)
+Subject → Verb → Object pattern
+
+In Attention (both matter)
+Semantic → connects related words
+(e.g., “rice” ↔ “dish”)
+Syntactic → connects grammar roles
+(e.g., “I” ↔ “made”)
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+Day-11
+Probability Density Function:
+
+Normal Distribution-mean=mode=median
+68-95-99.7
+SD-10,20,30
+mean-70 -68 people will be my 1st sd so 68% people will be in the range 60 to 80 
+students marks discrete values so we will calculate mean,mode,mediam if all these are equal we know its normal distribution. we calculate variance,standard deviation 
+
+Ideally we dont get normal distribution - its very rare
+uniform distribution-
+we have data of continuous value 
+probability getting 5 when we roll dice is -1/6
+
+Bernoullis distribution- which will give you only a single value descret value not continuous value this kind of distribution comes under this basically performing only one .either 0 or 1
+
+
+tail probability of flipping coin-1/2
+
+Binomial-no of successive of multiple independent bernoullis try
+flipping coin of 100 times and finding probability of getting heads-
+each email is indepent bernoullis if we are counting spam emails
+
+poisson  - time frame 
+no of events occurring in fixed independent time 
+no of calls made per hours 
+tracking no of hits per day 
+
+
+to predict if the patient has diabetics or not is the task
+now i have to train the model
+variance-
+bias-
+
+.describe()-will ingnore categorical value 
+
+mutli colinarity
+co variance
+x and y- x increases,y increses
+x-decreases,y -increases -here we can say we covariance
+
+
+age increase,exp increases - linear direction-corelated to each -
+feature engineer-feature-columns in data, if we need all or not ,how they are related to each other,how they will impact models in overfitting or underfitting thats where we perform heat maps by calculating pearson coeffient value.
+feature selection 
+
+l1 regularization ,l2 regularization - what features are important but before that we have to do it in EDA 
+
+for comparision-scaling of data- to bring all field values to samemetrics -in ml we dont give categorial so it wont be an issue 
+mean will be 0 and sd will be 1
+cross validation methods -splitting training data -
+
+training & testing data we dont put output in testing 
+validation
+EXPLORE ON INFERENTIAL STATICTICS-
+
+confusion matrix
+
+
+
+bias- balance 
+feature ,multi colinarity 
+
+Regression model
+
+
+
+
+EDA-ANY 1 DATA SET ,PIC SCENARIO,PERFORM EDA ON TOP OF IT ,FOR 1 IDENTIFY HIGH RETURNS,REVENUE BASICALLY EVERY ANALYSIS
+cuisines,DISHES,DIFF SECNARIO PERFORM EDA Exploratory DATA Analysis 
+
+
+
+
+
+
+
+

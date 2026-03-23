@@ -1,0 +1,46 @@
+Boosting algorithms such as AdaBoost, LightGBM, and CatBoost can be applied to both regression and classification problems. For regression, they sequentially learn residual errors to predict continuous values and are evaluated using metrics like RMSE or R². For classification, they predict class probabilities and are evaluated using metrics such as confusion matrix, ROC curve, and AUC.
+
+AdaBoost sequentially trains weak decision trees and increases the weight of misclassified samples so later models focus on difficult observations. LightGBM is a gradient boosting algorithm that sequentially builds trees to learn residual errors using gradient descent and uses leaf-wise tree growth for faster training. CatBoost is also a gradient boosting algorithm but is specifically optimized for categorical features using ordered boosting and symmetric trees to prevent target leakage and improve model stability.
+
+Boosting is an ensemble learning technique where multiple weak learners (usually shallow decision trees) are trained sequentially, and each new model focuses on correcting the mistakes made by the previous models. Instead of building one complex model, boosting gradually improves performance by combining many small models. At every iteration, the model evaluates the prediction error using a loss function, and the algorithm adjusts either sample weights (AdaBoost) or prediction residuals (Gradient Boosting based models). The final prediction is obtained by weighted aggregation of all trees. For classification problems, predictions are evaluated using metrics like confusion matrix, precision, recall, F1-score, ROC curve, and AUC, while regression tasks use MSE, RMSE, and R².
+Ensemble Learning is a machine learning technique where multiple models (usually weak learners) are combined to produce a stronger and more accurate model. The idea is that instead of relying on a single model, we train several models and aggregate their predictions to reduce variance, bias, and overall prediction error. The individual models are typically decision trees, and the final prediction is obtained through voting (for classification) or averaging (for regression). Ensemble learning improves model stability, accuracy, and generalization, which is why many advanced algorithms in machine learning are based on ensemble methods.
+
+--------------
+ensembling-bagging-random forest
+Boosting- passing training set to first decision tree-we will get misclassified weights. now we increase weights these new ones are passed in to new one -again we will find misclassified data points again we will increase weights we do until where majority of data points are matched.
+ADA Boost-
+higher priority-manipulative data points by increasing the weights
+Gradient boosted trees-instead of penalizing by increasing weights it basically reduce error 
+drawback:slow trainingprocess, not optimized for bigger data-
+XGboost:along with gradient we have use regularization l1 or l2 reducing over fitting,better than ADA,GRADIENT,handels parallely
+Light GBM:prone to over fitting for small data set but good for large data set compared to xgboost as it follows leaf based.
+cata boost: specifically for categorical data internally it does the conversion but the rest is same like other boosting 
+
+---
+Unsupervised:
+Clustering-the model will classify how to divide classes
+agglomerative-multiple clusters calculate distance and then forms clusters
+divisive-1cluster split to 2 then 2 to 4 then 4 to 8
+k-means--we give centroids we calculate distance for each data point to centroid distance 
+moving/recalculating centroid and then calculating distance again 
+how will be knowing the centroid first itself as you mentioned we gonna recalculate centroid?
+
+elbow method will tell us how many centroids to go with.initially we give random k value or we can find 
+dendrogram- by cutting line 
+DBSCAN-
+epsilon
+min_points
+core points
+border points
+noise
+from radius its not the circle but its the point in the circle that hows we have to consider .
+kname,kneighbouring,knearest neighbor,spn
+knn,spn-distance,no of vectors
+
+recommendation system-
+complete new item - collaborative filtering -knn alogrithm
+based on seasonality-
+
+building-budget, tracking the progress and predict if it is continued or any blockers from at 60 % profit or loss or going over budget 
+natural calamity -
+

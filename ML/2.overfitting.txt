@@ -1,0 +1,20 @@
+overfitting 
+multicollinearity- relation between two parameters 
+ignore,remove 1 column,merge them
+low bias-low varience is goal so the model will not get over fitted
+bias-variance tradeoff 
+we usually do downsampling/upsampling but we should prefere upsampling as downsampling would eliminate imp data.
+Regularization-reduces variance of model 
+LASO-LEAST ABSOLUTE SHRINKAGE AND SELECTION OPERATOR
+Ridge-
+elasticnet
+
+polynomial-degree 2-x^2
+degree-3 x^3
+degree -4 x^4
+
+
+
+silhouette then clusterfrom silhouette
+
+

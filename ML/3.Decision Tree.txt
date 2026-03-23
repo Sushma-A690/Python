@@ -1,0 +1,26 @@
+Decision Tree:
+Recursive-activity in recursive-greed approach-only present scenario it does 
+recursive binary splitting-each step it checks all positive steps & selects best output.
+both classification-0,1,regression-continue values
+root node-it is the start of tree pure,impure
+ex:dog,cat,donkey
+child:cat,dog-impure
+donkey-pure
+if its not pure it has to be splitted-greedy search coz it only looks for what it wants either a yes or no 
+overfitting-,underfitting -we will know this after having training & test data differences.
+noise-
+pruning-if we have overfitting data
+post pruning-too much memory or computation this after doing after the whole decision tree.
+pre pruning-each branch decision.
+gini-basically talks about pure or impure of data
+
+parent node-initial data set 
+Entropy--Entropy tells us how mixed the data is.----pure or not on initial field
+branch fields-entropy kanukovali 
+Information gain-parent-weighted entropy--So the tree chooses Age as a split.
+
+bagging-parallelly connecting decision tree and we take weighted avg for regression based technique.
+random forest-multiple decision tree
+id3-entropy,c45,cart 
+hyper parameter-
+ensembled learning-

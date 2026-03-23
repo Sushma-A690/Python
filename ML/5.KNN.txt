@@ -1,0 +1,101 @@
+
+
+What is KNN :The K-Nearest Neighbors (KNN) algorithm is a supervised machine learning method used for both classification and regression tasks.
+
+You have a new point (unknown) and you want to decide:
+
+Which category it belongs to
+
+KNN says:
+
+“Look at nearby points and copy what most of them are.”
+
+KNN is a simple ML technique for classification and regression
+
+Classification → output is category
+ Example: Spam / Not Spam
+
+Regression → output is number
+ Example: House price
+
+It works by identifying K closest data points
+ K = how many neighbors you check
+
+Example:
+
+K = 3 → check 3 nearest points
+
+K = 5 → check 5 nearest points
+Euclidean Distance:
+(2,3) ●
+        \
+         \
+          \   ← straight line (shortest path)
+           \
+            ● (5,7)
+finds the straight line distance.
+Manhattan Distance:
+d=∣x1​−x2​∣+∣y1​−y2​∣
+(2,3) ● ——> ——> ——>
+              |
+              |
+              |
+              ↓
+            ● (5,7)
+Minkowski Distance:
+p=1--behaves like Manhattan
+p=2--behaves like Euclidean
+pp=3--custom 
+
+
+Prediction based on majority or average
+
+Classification → majority voting
+
+Regression → average
+“Uses distance metrics like Euclidean distance”
+
+It finds how close points are
+
+Near → similar
+
+Far → different
+
+What is “K” (most important part)
+ K is just a number
+
+Example:
+
+K	Meaning
+1	Look at 1 nearest point
+3	Look at 3 nearest points
+5	Look at 5 nearest points
+Choosing K (VERY IMPORTANT)
+ If K is too small (like 1)
+
+Very sensitive to noise, Can overfit
+
+If K is too large
+
+Too general, Can underfit
+
+If K is even and a tie occurs in KNN, the algorithm can resolve it using distance-weighted voting, where closer neighbors have higher influence, or by selecting the class with smaller average distance. In practice, we avoid this issue by choosing an odd value of K.
+
+Best practice:
+
+Use cross-validation
+ Advantages
+
+Easy
+
+No training
+
+Works for both classification & regression
+ Disadvantages
+
+Slow (checks ALL data)
+
+Bad with many features
+
+Sensitive to noise
+
